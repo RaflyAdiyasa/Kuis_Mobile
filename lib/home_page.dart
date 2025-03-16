@@ -28,7 +28,7 @@ class _HomePageState extends State<HomePage> {
         ),
         centerTitle: true,
 
-        backgroundColor: const Color.fromARGB(255, 143, 229, 255),
+        backgroundColor: const Color.fromARGB(255, 255, 255, 255),
         actions: [
           IconButton(
             icon: const Icon(Icons.logout),

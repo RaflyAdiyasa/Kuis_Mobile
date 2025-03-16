@@ -7,8 +7,15 @@ class ProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 3, 173, 145),
       appBar: AppBar(title: Text("Profile")),
-      body: Center(child: Column(children: [Text("$usernameProfile")])),
+      body: Center(
+        child: Column(
+          children: [
+            Text(" Profile : $usernameProfile", style: TextStyle(fontSize: 90)),
+          ],
+        ),
+      ),
     );
   }
 }
