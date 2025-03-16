@@ -7,7 +7,7 @@ import 'package:kuis_rafly/profile_page.dart';
 class HomePage extends StatefulWidget {
   final String username;
 
-  const HomePage({super.key, required this.username});
+  const HomePage({required this.username});
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -46,8 +46,9 @@ class _HomePageState extends State<HomePage> {
                 context,
                 MaterialPageRoute(
                   builder:
-                      // (context) => const ProfilePage(usernameProfile: widged.username),
-                      (context) => const ProfilePage(usernameProfile: "rafly"),
+                      (context) =>
+                          ProfilePage(usernameProfile: widget.username),
+                  // (context) => const ProfilePage(usernameProfile: "rafly"),
                 ),
               );
             },
@@ -86,11 +87,7 @@ class _HomePageState extends State<HomePage> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        // Padding(padding: const EdgeInsets.all(16.0)),
-                        Image.network(
-                          dummyNews[index].image,
-                          // 'https://picsum.photos/800/400',
-                        ),
+                        Image.network(dummyNews[index].image),
                         const SizedBox(height: 10),
                         Text(
                           dummyNews[index].title,
@@ -125,9 +122,6 @@ class _HomePageState extends State<HomePage> {
                                       indexID: index,
                                       id: dummyNews[index].id,
                                     ),
-
-                                // deskripsi: dummyNews[index].description,
-                                // title: dummyNews[index].title,
                               ),
                             );
                           },
